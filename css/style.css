@@ -11,6 +11,14 @@ html {
 body {
     font-family: Roboto, sans-serif;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #5B6987;
+}
 
 /* HEADER */
 header {
@@ -42,4 +50,92 @@ header {
 .banner__sponsor img {
     flex-basis: calc(100% / 6);
     padding: 5px;
+}
+
+/* MAIN */
+/* Deploy */
+#deploy {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    padding: 60px 0;
+}
+#deploy > h2 {
+    font-size: 36px;
+    letter-spacing: -1px;
+    line-height: 39.5px;
+    color: #031B4E;
+}
+#deploy > p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.deploy__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+}
+.deploy__wrapper .col-1 {
+    flex-basis: 30%;
+}
+.deploy__wrapper .col-1 ul {
+    padding-left: 0;
+    list-style: none;
+}
+.deploy__wrapper .col-1 ul li {
+    border-left: 2px solid rgb(203,203,203, 0.5);
+    border-radius: 1px;
+    transition: 0.3s linear;
+    text-align: left;
+}
+.deploy__wrapper .col-1 ul li:hover{
+    border-left: 2px solid #006AFF;
+}    
+.deploy__wrapper .col-1 ul li a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px 20px;
+    color: rgb(91,105,135, 0.7);
+}
+.deploy__wrapper .col-2 {
+    flex-basis: 70%;
+    display: inline-block;
+}
+.deploy__wrapper .col-2__box {
+    width: calc(50% - 4px);
+    text-align: left;
+    display: inline-block;
+    padding: 0 15px;
+}
+.deploy__wrapper .col-2__box h4 {
+    font-size: 18px;
+    line-height: 25.5px;
+    color: #031B4E;
+    margin: 15px 0;
+}
+.deploy__wrapper .col-2__box p {
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+    .deploy__wrapper {
+        display: block;
+        width: 100%;
+    }
+    .deploy__wrapper > * {
+        margin: 20px 0;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #deploy {
+        width: 95%;
+    }
+    .deploy__wrapper .col-2__box {
+        display: block;
+    }
 }
